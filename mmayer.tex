@@ -28,7 +28,7 @@
 %% See texdoc.net/pkg/fontawecome and http://texdoc.net/pkg/academicons for full list of symbols. You MUST compile with XeLaTeX or LuaLaTeX if you want to use academicons.
 
 % Change the page layout if you need to
-\geometry{left=2cm,right=10cm,marginparwidth=6.8cm,marginparsep=1.2cm,top=1.25cm,bottom=1.25cm}
+\geometry{left=2cm,right=2cm,marginparwidth=6.8cm,marginparsep=1.2cm,top=1.25cm,bottom=1.25cm}
 
 % Change the font if you want to, depending on whether
 % you're using pdflatex or xelatex/lualatex
@@ -58,6 +58,9 @@
 
 %% sample.bib contains your publications
 \addbibresource{sample.bib}
+
+% MANUAL USEPACKAGES
+\usepackage{multicol}
 
 \begin{document}
 \name{J\'ulia Begrmann}
@@ -93,80 +96,187 @@
 % \divider
 %\cvskill{German}{3}
 
-% EDUCATION
-\cvsection[page1sidebar]{Education}
-\cvevent{E\"otv\"os Lor\'and University}{PhD in Informatics}{Sep 2020 -- Jun 2025}{Budapest}
+\begin{multicols}{2}
 
-\begin{itemize}
-	\item Industrial data analytics\\
-	\item Defining and refining production system models\\
-	\item Machine learning
-\end{itemize}
+	% EDUCATION
+	\cvsection{Education}
+	\cvevent{E\"otv\"os Lor\'and University}{PhD in Informatics}{Sep 2020 -- Jun 2025}{Budapest}
 
-\divider
+	\begin{itemize}
+		\item Industrial data analytics\\
+		\item Defining and refining production system models\\
+		\item Machine learning
+	\end{itemize}
 
-\cvevent{Budapest University of Technology}{MSc in Mathematics}{Sep 2015 -- Jun 2018}{Budapest}
-\begin{itemize}
-	\item Specialized on Analysis
-\end{itemize}
+	\divider
 
-\divider
+	\cvevent{Budapest University of Technology}{MSc in Mathematics}{Sep 2015 -- Jun 2018}{Budapest}
+	\begin{itemize}
+		\item Specialized on Analysis
+	\end{itemize}
 
-\cvevent{Budapest University of Technology}{BSc in Mathematics}{Sep 2015 -- Jun 2018}{Budapest}
+	\divider
 
-% EXPERIENCE
-\cvsection{Experience}
-\cvevent{Data Analyst \& Scientist}{EPIC InnoLabs}{Sep 2018 -- Present}{Budapest}
-\begin{itemize}
-	\item blah\\
-	\item blah\\
-	\item blah
-\end{itemize}
+	\cvevent{Budapest University of Technology}{BSc in Mathematics}{Sep 2015 -- Jun 2018}{Budapest}
 
-\divider
+	% EXPERIENCE
+	\cvsection{Experience}
+	\cvevent{Data Analyst \& Scientist}{EPIC InnoLabs}{Sep 2018 -- Present}{Budapest}
+	\begin{itemize}
+		\item blah\\
+		\item blah\\
+		\item blah
+	\end{itemize}
 
-\cvevent{Researcher}{SZTAKI}{Oct 2017 -- Present}{Budapest}
-\begin{itemize}
-	\item blah\\
-	\item blah
-\end{itemize}
+	\divider
 
-\divider
+	\cvevent{Researcher}{SZTAKI}{Oct 2017 -- Present}{Budapest}
+	\begin{itemize}
+		\item blah\\
+		\item blah
+	\end{itemize}
 
-\cvevent{Trainee}{Nokia}{Sep 2016 -- Jan 2017}{Budapest}
-\begin{itemize}
-	\item blah
-\end{itemize}
+	\divider
+
+	\cvevent{Trainee}{Nokia}{Sep 2016 -- Jan 2017}{Budapest}
+	\begin{itemize}
+		\item blah
+	\end{itemize}
 
 
-\cvsection{Languages}
-\cvskill{English}{5}
-\cvskill{French}{3}
-\cvskill{Spanish}{1}
-% \cvevent{Product Engineer}{Google}{23 June 1999 -- 2001}{Palo Alto, CA}
+	\cvsection{Languages}
+	\cvskill{English}{5}
+	\cvskill{French}{3}
+	\cvskill{Spanish}{1}
+	% \cvevent{Product Engineer}{Google}{23 June 1999 -- 2001}{Palo Alto, CA}
 
-% \begin{itemize}
-% \item Joined the company as employe \#20 and female employee \#1
-% \item Developed targeted advertisement in order to use user's search queries and show them related ads
-% \end{itemize}
+	% \begin{itemize}
+	% \item Joined the company as employe \#20 and female employee \#1
+	% \item Developed targeted advertisement in order to use user's search queries and show them related ads
+	% \end{itemize}
 
-%\cvsection{A Day of My Life}
+	%\cvsection{A Day of My Life}
 
-% Adapted from @Jake's answer from http://tex.stackexchange.com/a/82729/226
-% \wheelchart{outer radius}{inner radius}{
-% comma-separated list of value/text width/color/detail}
-% Some ad-hoc tweaking to adjust the labels so that they don't overlap
-% \wheelchart{1.5cm}{0.5cm}{%
-%   10/10em/accent!30/Sleeping \& dreaming about work,
-%   25/9em/accent!60/Public resolving issues with Yahoo!\ investors,
-%   5/13em/accent!10/\footnotesize\\[1ex]New York \& San Francisco Ballet Jawbone board member,
-%   20/15em/accent!40/Spending time with family,
-%   5/8em/accent!20/\footnotesize Business development for Yahoo!\ after the Verizon acquisition,
-%   30/9em/accent/Showing Yahoo!\ employees that their work has meaning,
-%   5/8em/accent!20/Baking cupcakes
-% }
+	% Adapted from @Jake's answer from http://tex.stackexchange.com/a/82729/226
+	% \wheelchart{outer radius}{inner radius}{
+	% comma-separated list of value/text width/color/detail}
+	% Some ad-hoc tweaking to adjust the labels so that they don't overlap
+	% \wheelchart{1.5cm}{0.5cm}{%
+	%   10/10em/accent!30/Sleeping \& dreaming about work,
+	%   25/9em/accent!60/Public resolving issues with Yahoo!\ investors,
+	%   5/13em/accent!10/\footnotesize\\[1ex]New York \& San Francisco Ballet Jawbone board member,
+	%   20/15em/accent!40/Spending time with family,
+	%   5/8em/accent!20/\footnotesize Business development for Yahoo!\ after the Verizon acquisition,
+	%   30/9em/accent/Showing Yahoo!\ employees that their work has meaning,
+	%   5/8em/accent!20/Baking cupcakes
+	% }
+	\cvsection{TECHNICAL SKILLS}
+	\cvtag{Python}
+	\cvtag{SQL}
+	\cvtag{Plotly}
+	\cvtag{Dash}
+	\cvtag{NumPy}
+	\cvtag{Pandas}
+	\cvtag{Scikit-learn}
+	\cvtag{Tensorflow}
+	\cvtag{Pycaret}
+	\cvtag{R}
+	\cvtag{Shiny}
+	\cvtag{Plant Simulation}
+	\cvtag{Xpress}
+	\cvtag{\LaTeX}
+	%\divider
+	% \cvachievement{\faTrophy}{}{Received accolades at Atos for Best Performance in team.}
+	% \cvachievement{\faTrophy}{}{Received Best Debut Award at Atos. }
+	% %\divider
+	% \cvachievement{\faInstitution}{}{Won 2nd Consolation Prize for paper presented on Cognitive Radio Networks.}
+	% %\divider
+	% \cvachievement{\faGraduationCap}{}{Got Selected in "Exclusive Scholar Program" during undergrad.}
+	% %\divider
+	% \cvachievement{\faDollar}{}{Awarded with Narotam Sekhsaria Foundation Scholarship}
+	%\cvsection{Strengths}
 
+	%\cvtag{Hard-working (18/24)} 
+	%\cvtag{Persuasive}
+	%\cvtag{Motivator \& Leader}
+
+	%\divider\smallskip
+
+	%\cvtag{UX}
+	%\cvtag{Mobile Devices \& Applications}
+	%\cvtag{Product Management \& Marketing}
+
+
+	%\divider
+
+	%\cvevent{B.S.\ in Symbolic Systems}{Stanford University}{Sept 1993 -- June 1997}{}
+
+	\cvsection{Projects}
+	\cvproject{Project}
+	\begin{itemize}
+		\item Synthesizing Music Information Retrieval (MIR) and genetic algorithms to discover and improve short, music generating lines of C code.
+		\item Implementing the model using a similar approach to the Ramanujan Machine.
+	\end{itemize}
+	\smallskip
+	\cvproject{Project}
+	\begin{itemize}
+		\item Designing and developing an electronic health records system focusing on aiding and assisting patients as well as providing a smoother data management experience for healthcare personnel (e.g. Physicians, Nurses, etc.).
+	\end{itemize}
+	\smallskip
+	\cvproject{Project}
+	\begin{itemize}
+		\item Developed an MIR algorithm to detect pitches in .mp3 files, reproduce them in MIDI, and synthesize them using custom wave formats.
+		\item Used real-time signal processing to visualize the outputs generated by the algorithm.
+	\end{itemize}
+	\smallskip
+	\cvproject{Project}
+	\begin{itemize}
+		\item Designed and developed a flight booking website from scratch, providing multiple services to both end-consumers and airlines.
+		\item Implemented the website using Python, Flask, SQL, JS and HTML/Bootstrap/CSS.
+	\end{itemize}
+	\smallskip
+	\cvproject{Project}
+	\begin{itemize}
+		\item Solely developed a program to automatically generate quarterly performance reports for Arch Global Advisors, scraping the web to get historical stock price data, dividend data, and earnings release dates.
+		\item Ultimately cut the firm's reporting process from days to minutes.
+	\end{itemize}
+
+	\cvsection{Soft Skills}
+	\begin{itemize}
+		\item Natural networker, who, having lived in several countries, quickly adapts to social environments with people from all over the world.
+		\item Hosted Chinese Language Competition at NYU, acting as an MC for an audience of more than 100 attendees.
+		\item Acted as a Community Manager for Red Pulse, successfully leading a group of over 150 writers.
+
+	\end{itemize}
+
+	\cvproject{}
+
+
+\end{multicols}
 \clearpage
+
+\cvsection{PUBLICATIONS}
+
+
+% \cvitem{
+%     \cvheadingstyle{}
+% }{
+\begin{enumerate}[label={[\arabic*]}]
+	\item Bergmann, J., Zeleny, K. É., Váncza, J., Kő, A. (2022). Tool failure recognition using inconsistent data. \textit{Procedia CIRP 107}, 1204-1209. \url{https://doi.org/10.1016/j.procir.2022.05.132}
+	\item Bergmann, J., Gyulai, D., \& Váncza, J. (2021). Adaptive AGV fleet management in a dynamically changing production environment. \textit{PROCEDIA MANUFACTURING, 54}, 148–153. \url{http://doi.org/10.1016/j.promfg.2021.07.046}
+	\item Bergmann, J., Gyulai, D., \& Váncza, J. (2021). Automated vehicle fleet management in manufacturing environments combining network analysis, parameter prediction and optimization techniques. In \textit{IFORS 2021 Virtual, Programme Book} (pp. 128–128). \url{https://www.euro-online.org/conf/admin/tmp/program-ifors2021.pdf}
+	\item Frye, M., Gyulai, D., Bergmann, J., \& Schmitt, R. H. (2021). Production rescheduling through product quality prediction. \textit{PROCEDIA MANUFACTURING, 54}, 142–147. \url{http://doi.org/10.1016/j.promfg.2021.07.022}
+	\item Bergmann, J., Gyulai, D., Morassi, D., \& Váncza, J. (2020). A stochastic approach to calculate assembly cycle times based on spatial shop-floor data stream. \textit{PROCEDIA CIRP, 93}, 1164–1169. \url{http://doi.org/10.1016/j.procir.2020.03.052}
+	\item Gyulai, D., Bergmann, J., Lengyel, A., Kádár, B., \& Czirkó, D. (2020). Simulation-based Digital Twin of a Complex Shop-Floor Logistics System. In \textit{Proceedings of the 2020 Winter Simulation Conference, WSC 2020} (pp. 1849–1860). \url{http://doi.org/10.1109/WSC48552.2020.9383936}
+	\item Gyulai, D., Bergmann, J., \& Váncza, J. (2020). Adaptive network analytics for managing complex shop-floor logistics systems. \textit{CIRP ANNALS-MANUFACTURING TECHNOLOGY, 69}(1), 393–396. \url{http://doi.org/10.1016/j.cirp.2020.04.002}
+	\item Gyulai, D., Pfeiffer, A., \& Bergmann, J. (2020). Analysis of asset location data to support decisions in production management and control. \textit{PROCEDIA CIRP, 88}, 197–202. http://doi.org/10.1016/j.procir.2020.05.035
+	\item Molontay, R., Horváth, N., Bergmann, J., Szekrényes, D. L., \& Szabó, M. (2020). Characterizing curriculum prerequisite networks by a student flow approach. \textit{IEEE TRANSACTIONS ON LEARNING TECHNOLOGIES, 13}(3), 491–501. \url{http://doi.org/10.1109/TLT.2020.2981331}
+	\item Tsutsumi, D., Gyulai, D., Takács, E., Bergmann, J., Nonaka, Y., \& Fujita, K. (2020). Personalized work instruction system for revitalizing human-machine interaction. \textit{PROCEDIA CIRP, 93}, 1145–1150. \url{http://doi.org/10.1016/j.procir.2020.04.062}
+	\item Frye, M., Gyulai, D., Bergmann, J., \& Schmitt, R. H. (2019). Adaptive scheduling through machine learning-based process parameter prediction. \textit{MM Science Journal, 2019}(November), 3060–3066. \url{http://doi.org/10.17973/MMSJ.2019\_11\_2019051}
+	\item Gyulai, D., Bergmann, J., Gallina, V., \& Gaal, A. (2019). Towards a connected factory: Shop-floor data analytics in cyber-physical environments. \textit{PROCEDIA CIRP, 86}, 37–42. \url{http://doi.org/10.1016/j.procir.2020.01.016}
+	\item Nick, G., Szaller, Á., Bergmann, J., \& Várgedő, T. (2019). Industry 4.0 readiness in Hungary: model, and the first results in connection to data application. \textit{IFAC PAPERSONLINE, 52}(13), 289–294. \url{http://doi.org/10.1016/j.ifacol.2019.11.185}
+	\item Gyulai, D., Pfeiffer, A., Bergmann, J., \& Gallina, V. (2018). Online lead time prediction supporting situation-aware production control. \textit{PROCEDIA CIRP, 78}, 190–195. \url{http://doi.org/10.1016/j.procir.2018.09.071}
+\end{enumerate}
 
 % \cvsection[page2sidebar]{Publications}
 
